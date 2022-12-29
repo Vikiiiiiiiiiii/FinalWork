@@ -24,3 +24,17 @@ void PrintArray(int[] array)
     Console.WriteLine(); 
 } 
 
+void NewArray(ref int[] array, int index)
+{
+    int [] newResult = new int [array.Length - 1];
+    for (int i = 0; i < index; i++)
+    {
+        newResult [i] = array[i];
+    }
+    for (int i = index + 1; i < array.Length; i++)
+    {
+        newResult [i-1] = array[i];
+        array = newResult;
+    }
+}
+
