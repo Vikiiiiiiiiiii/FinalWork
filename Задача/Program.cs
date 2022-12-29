@@ -38,3 +38,9 @@ void NewArray(ref int[] array, int index)
     }
 }
 
+int [] array = InitArray(4);
+PrintArray(array);
+Console.WriteLine();
+
+NewArray(ref array, 2);
+PrintArray(array);
